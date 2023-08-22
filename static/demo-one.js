@@ -114,6 +114,8 @@ console.log('demo script loaded!');
 	 */
 	clickMe.init = function ( options ) {
 
+		console.log( 'demo plugin init!' );
+
 		// feature test
 		if ( !supports ) return;
 
