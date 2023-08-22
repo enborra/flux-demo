@@ -1,3 +1,7 @@
+console.log('demo script loaded!');
+
+
+
 (function (root, factory) {
 	if ( typeof define === 'function' && define.amd ) {
 		define(['buoy'], factory(root));
