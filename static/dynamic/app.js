@@ -31,6 +31,8 @@ const initWhenReady = () => {
     const id = `demo-box-dynamic`;
     // document.write(`<div id="${ id }"></div>`);
     document.getElementById(id).appendChild(myWidgetInstance);
+
+    document.getElementById(id).load('index.html');
 };
 
 addEventListener('DOMContentLoaded', initWhenReady);
