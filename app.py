@@ -9,6 +9,6 @@ app = Flask(__name__)
 def index():
 	return 'tada.'
 
-@app.route('/static/<path:path>')
+@app.route('/widgets/<path:path>')
 def send_static(path):
 	return send_from_directory('static', path)
