@@ -33,6 +33,7 @@ const initWhenReady = () => {
     document.getElementById(id).appendChild(myWidgetInstance);
 
     $('#test-block').load('//flux-app-p5g3r.ondigitalocean.app/widgets/dynamic/index.html');
+    
 };
 
 addEventListener('DOMContentLoaded', initWhenReady);
