@@ -32,7 +32,7 @@ const initWhenReady = () => {
     // document.write(`<div id="${ id }"></div>`);
     document.getElementById(id).appendChild(myWidgetInstance);
 
-    $(id).load('index.html');
+    $('#test-block').load('index.html');
 };
 
 addEventListener('DOMContentLoaded', initWhenReady);
