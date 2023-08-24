@@ -32,7 +32,7 @@ const initWhenReady = () => {
     // document.write(`<div id="${ id }"></div>`);
     document.getElementById(id).appendChild(myWidgetInstance);
 
-    $('#test-block').load('index.html');
+    $('#test-block').load('//flux-app-p5g3r.ondigitalocean.app/widgets/dynamic/index.html');
 };
 
 addEventListener('DOMContentLoaded', initWhenReady);
