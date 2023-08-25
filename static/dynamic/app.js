@@ -33,7 +33,8 @@ const initWhenReady = () => {
     document.getElementById(id).appendChild(myWidgetInstance);
 
     var scriptElement = document.getElementById('demo-box-dyn-src');
-    console.log(scriptElement.src);
+    var loc = scriptElement.src;
+    console.log( loc.substring(0, loc.lastIndexOf("/")) );
 
     $('#test-block').load('//flux-app-p5g3r.ondigitalocean.app/widgets/dynamic/index.html');
 };
