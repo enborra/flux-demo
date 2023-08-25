@@ -34,9 +34,9 @@ const initWhenReady = () => {
 
     var scriptElement = document.getElementById('demo-box-dyn-src');
     var loc = scriptElement.src;
-    console.log( loc.substring(0, loc.lastIndexOf("/")) );
+    currDir = loc.substring(0, loc.lastIndexOf("/")) + '/';
 
-    $('#test-block').load('//flux-app-p5g3r.ondigitalocean.app/widgets/dynamic/index.html');
+    $('#test-block').load(currDir + 'index.html');
 };
 
 addEventListener('DOMContentLoaded', initWhenReady);
