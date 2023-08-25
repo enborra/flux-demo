@@ -32,8 +32,10 @@ const initWhenReady = () => {
     // document.write(`<div id="${ id }"></div>`);
     document.getElementById(id).appendChild(myWidgetInstance);
 
+    var scriptElement = document.getElementById('demo-box-dyn-src');
+    console.log(scriptElement.src);
+
     $('#test-block').load('//flux-app-p5g3r.ondigitalocean.app/widgets/dynamic/index.html');
-    
 };
 
 addEventListener('DOMContentLoaded', initWhenReady);
