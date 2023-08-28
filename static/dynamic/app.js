@@ -1,3 +1,6 @@
+
+
+
 const Widget = Object.create({
     create(demoId) {
         const wdg = document.createElement("div");
@@ -9,34 +12,23 @@ const Widget = Object.create({
     }
 });
 
-// const myWidgetInstance = Widget.create("chat-123456");
-
-// const id = `chat-${ Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1) }`;
-// document.write(`<div id="${ id }"></div>`);
-// document.getElementById(id).appendChild(myWidgetInstance);
-
-
 
 
 const initWhenReady = () => {
     removeEventListener("DOMContentLoaded", initWhenReady);
-    
-    // Array.prototype.forEach.call(document.querySelectorAll(".demo-box"), ele => {
-    //     const myWidgetInstance = Widget.create(ele.dataset.chatid);
-    //     ele.appendChild(myWidgetInstance);
-    // });
 
     const myWidgetInstance = Widget.create("demo-123456");
 
     const id = `demo-box-dynamic`;
     // document.write(`<div id="${ id }"></div>`);
-    document.getElementById(id).appendChild(myWidgetInstance);
-
     var scriptElement = document.getElementById('demo-box-dyn-src');
     var loc = scriptElement.src;
     currDir = loc.substring(0, loc.lastIndexOf("/")) + '/';
 
-    $('#test-block').load(currDir + 'index.html');
+    // $('#test-block').load(currDir + 'index.html');
+    myWidgetInstance.load( currDir+'index.html' );
+
+    document.getElementById(id).appendChild(myWidgetInstance);
 };
 
 addEventListener('DOMContentLoaded', initWhenReady);
