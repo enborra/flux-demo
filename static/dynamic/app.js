@@ -26,7 +26,7 @@ const initWhenReady = () => {
     currDir = loc.substring(0, loc.lastIndexOf("/")) + '/';
 
     // $('#test-block').load(currDir + 'index.html');
-    myWidgetInstance.load( currDir+'index.html' );
+    $(myWidgetInstance).load( currDir+'index.html' );
 
     document.getElementById(id).appendChild(myWidgetInstance);
 };
